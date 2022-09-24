@@ -2,7 +2,7 @@
 Folders:
   -Project: mylibrary
   -App    : management
-  -Screenshots(click download on immage file to see full images)
+  -Screenshots(click download on image file to see full images)
   -Templates
   -Static
 Files:
