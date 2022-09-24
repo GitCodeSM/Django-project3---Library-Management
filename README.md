@@ -11,3 +11,4 @@ Function: A library management project using Django ModelForm, crispy_forms and 
           Admin librarian has to always add a new member name with every book or add the same name but as new 'member object' for every new book or change the name in             previous book to show it being issued by another name or returned and 'available' in status with a member name 'none'.
 
 Project made by: Swati Mishra
+Date: 24th September 2022
