@@ -16,19 +16,29 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings #add this
-from django.conf.urls.static import static #add this
-import management
-from management import urls, views
+# from django.conf import settings #add this
+# from django.conf.urls.static import static #add this
+import management.api.urls
+import static
+from mylibrary import settings
 
 urlpatterns = [
-    path('', include(management.urls)),
+    path('', include(management.api.urls)),
     path('admin/', admin.site.urls),
-    path('signup/', include(management.urls),),
-    path('login/', include(management.urls)),
-    path('logout/', include(management.urls)),
-    path('book/', views.BookView, name='book'),
+    path('signup/', include(management.api.urls),),
+    path('login/', include(management.api.urls)),
+    path('logout/', include(management.api.urls)),
 ]
 
-#if settings.DEBUG: #add this
-    #urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
+# urlpatterns = [
+#     path('', include(management.urls)),
+#     path('admin/', admin.site.urls),
+#     path('signup/', include(management.urls),),
+#     path('login/', include(management.urls)),
+#     path('logout/', include(management.urls)),
+#     path('book/', views.BookView, name='book'),
+# ]
+
+
+# if settings.DEBUG: #add this
+#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
